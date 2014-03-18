@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Nixie+One);
+@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+
+
+
+body {
+    /*background-color: #F8F8F8;*/
+    background-color: #FFFFFF;
+    margin-top: 50px;
+    color: #162636;
+}
+
+
+/*************************************
+**************************************
+**************************************
+
+    BEGIN HEADER STYLES
+
+**************************************
+**************************************
+**************************************/
+
+.navbar-default {
+    background-color: #F1f1f1;
+    border-color: #E7E7E7;
+}
+
+.navbar-brand {
+    /*font-family: 'Nixie One', cursive;*/
+    font-family: 'Pontano Sans', sans-serif;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #162636;
+}
+
+.navbar-default .navbar-brand {
+    color: #162636;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #162636;
+    background-color: #E7E7E7;
+}
+
+/*************************************
+**************************************
+**************************************
+
+     END HEADER STYLES
+
+**************************************
+**************************************
+**************************************/
+
+
+
+
+
+
+
+
+.splash {
+    padding: 5em 0px;
+    background: url(file:///Macintosh%20HD/Users/Stone/Desktop/stizelwebs/html/bootstrap-version1/img/banner.jpg) no-repeat;
+    color: #162636;
+    text-align: center;
+    background-size: cover;
+}
+
+
+.home-jumbo {
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 32px;
+}
+
+.pagehead {
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+
+/*************************************
+**************************************
+**************************************
+
+    BEGIN NAV STYLES
+
+**************************************
+**************************************
+**************************************/
+
+
+
+
+/*************************************
+**************************************
+**************************************
+
+     END NAV STYLES
+
+**************************************
+**************************************
+**************************************/
+
+
+
+
+
+/*************************************
+**************************************
+**************************************
+
+    BEGIN CONTENT STYLES
+
+**************************************
+**************************************
+**************************************/
+
+
+
+
+.content-container {
+    padding: 15px;
+    background-color: #F1F1F1;
+    color: #2b3e50;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    background:url(../img/background.jpg) no-repeat;
+    min-height: 360px;
+}
+
+.jumbotron p {
+    /*color: #2B3E50;*/
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    color: #485563;
+    font-size: 26px;
+}
+.kevinname {
+    color: #2B3E50;
+    font-size: 46px;
+    font-family: 'Audiowide', cursive;
+}
+.panel-body {
+    color: #FFFFFF;
+}
+
+.content-container-margin-top {
+    margin-top: 40px;
+}
+
+.section-tout {
+    padding: 40px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #162636;
+    color: #FFFFFF;
+}
+
+.section-page-header {
+    padding: 20px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #162636;
+    color: #F8F8F8;
+}
+
+.section-content {
+    padding: 20px 0;
+}
+
+
+
+
+/*************************************
+**************************************
+**************************************
+
+     END CONTENT STYLES
+
+**************************************
+**************************************
+**************************************/
+
+
+
+
+
+
+/*************************************
+**************************************
+**************************************
+
+     BEGIN FOOTER STYLES
+
+**************************************
+**************************************
+**************************************/
+footer {
+    padding: 15px;
+}
+
+footer p {
+    padding-top: 10px;
+}
+
+footer a {
+    /*color: #428BCA;*/
+    color: #FFFFFF;
+}
+
+footer .nav > li > a:hover {
+    background-color: #FFFFFF;
+}
+
+/*************************************
+**************************************
+**************************************
+
+     END FOOTER STYLES
+
+**************************************
+**************************************
+**************************************/

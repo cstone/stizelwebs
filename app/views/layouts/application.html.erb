@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stizelwebs</title>
+  <title>Stizelwebs.com ::  A Division of Stizel.com</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <!--Latest minified Font Awesome CSS-->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+
+
+  <!-- Custom styles for this template -->
+  <%= stylesheet_link_tag 'my_styles' %>
+
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
+
+
+
 <body>
 
-<%= yield %>
+<%= render 'layouts/structure/navigation' %>
 
+<div class="section-page-header">
+  <div class="container">
+    <p class="pagehead">About Us</p>
+  </div>
+</div>
+
+<div class="section-content">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol>
+    <%= yield %>
+  </div>
+</div>
+
+<div class="container">
+  <footer>
+    <div class="row">
+
+    </div>
+
+  </footer>
+
+
+</div>
+<!-- /container -->
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>

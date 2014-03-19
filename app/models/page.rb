@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  attr_accessible :content, :page_image, :permalink, :title
+  attr_accessible :content, :page_image, :permalink, :title, :remove_page_image
 
   validates_uniqueness_of :permalink
 

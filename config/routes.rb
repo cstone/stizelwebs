@@ -1,5 +1,8 @@
 Stizelwebs::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   resources :pages, except: [:show]
 
   match '/contact', to: 'contact_us/contacts#new', as: :contact_stizel

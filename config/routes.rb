@@ -1,6 +1,7 @@
 Stizelwebs::Application.routes.draw do
   resources :pages, except: [:show]
 
+  match '/contact', to: 'contact_us/contacts#new', as: :contact_stizel
   match ':id', to: 'pages#show', as: :page
 
 

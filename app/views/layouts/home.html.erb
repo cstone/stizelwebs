@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><% if @page_header %><%= @page_header %>  ::  <% end %>Stizelwebs.com </title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <!--Latest minified Font Awesome CSS-->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+  <!-- Custom styles for this template -->
+  <%= stylesheet_link_tag 'my_styles' %>
+
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+
+
+
+<body>
+<%= render 'layouts/structure/navigation' %>
+
+
+<%= render 'layouts/structure/splash' %>
+
+
+<%= render 'layouts/structure/promo' %>
+
+
+<%= render 'layouts/structure/home-content' %>
+
+<%= render 'layouts/structure/footer' %>
+<!-- /container -->
+
+
+
+
+<%= render 'layouts/structure/footer-scripts' %>
+</body>
+</html>

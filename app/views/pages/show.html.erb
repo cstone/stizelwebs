@@ -1,25 +1,3 @@
-<p id="notice"><%= notice %></p>
+<% @page_header = "#{@page.title}" %>
 
-<p>
-  <b>Title:</b>
-  <%= @page.title %>
-</p>
-
-<p>
-  <b>Permalink:</b>
-  <%= @page.permalink %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @page.content %>
-</p>
-
-<p>
-  <b>Page image:</b>
-  <%= @page.page_image %>
-</p>
-
-
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<%= simple_format @page.content %>

@@ -1,7 +1,6 @@
 Stizelwebs::Application.routes.draw do
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+
 
   resources :pages, except: [:show]
 
@@ -9,6 +8,9 @@ Stizelwebs::Application.routes.draw do
   match ':id', to: 'pages#show', as: :page
 
   root :to => 'home#index'
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
 
   # The priority is based upon order of creation:

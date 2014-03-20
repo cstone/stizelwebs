@@ -1,4 +1,7 @@
 ActiveAdmin.register Portfolio do
+  controller do
+    defaults :finder => :find_by_title
+  end
 
   index do
     selectable_column

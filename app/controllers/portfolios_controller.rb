@@ -11,7 +11,7 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio = Portfolio.find(params[:id])
+    @portfolio = Portfolio.find_by_title!(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

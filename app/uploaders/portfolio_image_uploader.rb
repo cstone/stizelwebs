@@ -36,7 +36,7 @@ class PortfolioImageUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
-  process :resize_to_limit => [250, 0]
+  process :resize_to_limit => [600, 0]
   # Process files as they are uploaded:
   # process :scale => [200, 300]
   #

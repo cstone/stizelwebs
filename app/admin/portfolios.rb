@@ -1,6 +1,6 @@
 ActiveAdmin.register Portfolio do
   controller do
-    defaults :finder => :find_by_title
+    defaults :finder => :find_by_slug
   end
 
   index do
@@ -11,6 +11,7 @@ ActiveAdmin.register Portfolio do
     column :title
     column :description
     column :website
+    column :slug
     default_actions
   end
 
@@ -18,6 +19,7 @@ ActiveAdmin.register Portfolio do
   form do |f|
     f.inputs do
       f.input :title
+      f.input :slug
       f.input :description, as: :html_editor
       f.input :website
     end
@@ -35,6 +37,7 @@ ActiveAdmin.register Portfolio do
     attributes_table do
       row :id
       row :title
+      row :slug
       row :website
       row :description do
         simple_format portfolio.description

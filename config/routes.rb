@@ -2,6 +2,8 @@ Stizelwebs::Application.routes.draw do
 
 
 
+  get "portfolios/index"
+
   resources :pages, except: [:show]
 
   match '/contact', to: 'contact_us/contacts#new', as: :contact_stizel

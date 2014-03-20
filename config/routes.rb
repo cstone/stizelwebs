@@ -1,18 +1,17 @@
 Stizelwebs::Application.routes.draw do
 
+  root :to => 'home#index'
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
 
-  get "portfolios/index"
-
+  resources :portfolios, only: [:index, :show]
   resources :pages, except: [:show]
 
   match '/contact', to: 'contact_us/contacts#new', as: :contact_stizel
   match ':id', to: 'pages#show', as: :page
 
-  root :to => 'home#index'
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
 
 
   # The priority is based upon order of creation:
@@ -70,5 +69,5 @@ Stizelwebs::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)'
 end

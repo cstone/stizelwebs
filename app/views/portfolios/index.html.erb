@@ -1,0 +1,19 @@
+<% @page_header = 'Portfolio' %>
+
+<% @portfolios.each do |portfolio| %>
+<div class="row">
+  <div class="col-md-7">
+    <%= link_to(image_tag("#{portfolio.portfolio_image.url}"), '#') %>
+  </div>
+
+
+
+  <div class="col-md-5">
+    <h4><%= link_to "#{portfolio.title}", '#' %></h4>
+    <p><%= portfolio.description %></p>
+    <p><%= link_to 'View website', portfolio.website %></p>
+  </div>
+
+</div>
+<hr/>
+<% end %>

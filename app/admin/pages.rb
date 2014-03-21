@@ -5,9 +5,7 @@ ActiveAdmin.register Page do
 
   index do
     selectable_column
-    column :page_image do |page|
-      image_tag(page.page_image.url(:thumb))
-    end
+
     column :title
     column :permalink
     default_actions
@@ -37,9 +35,7 @@ ActiveAdmin.register Page do
       row :content do
         simple_format page.content
       end
-      row :page_image do
-        image_tag(page.page_image.url(:thumb))
-      end
+
       row :created_at
       row :updated_at
     end

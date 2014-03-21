@@ -91,7 +91,7 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 
 .pagehead {
     font-size: 24px;
-    color: #FFFFFF;
+    color: #162636;
 }
 
 
@@ -178,8 +178,8 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
     padding: 20px 0px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #162636;
-    color: #F8F8F8;
+    background: url(https://s3.amazonaws.com/stizelwebs/img/banner.jpg);
+    color: #162636;
 }
 
 .section-content {
@@ -221,20 +221,23 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 **************************************
 **************************************/
 footer {
-    padding: 15px;
+  background-color: #162636;
+  padding:20px 0;
+  color: #FFFFFF;
+  min-height:150px;
 }
 
 footer p {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 footer a {
-    /*color: #428BCA;*/
-    color: #FFFFFF;
+  /*color: #428BCA;*/
+  color: #FFFFFF;
 }
 
 footer .nav > li > a:hover {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 /*************************************

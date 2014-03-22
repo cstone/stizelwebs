@@ -1,5 +1,5 @@
 <% @page_header = 'Contact Us' %>
-<p><%= @contact_content %></p>
+<p><%= simple_format @contact_content %></p>
 <%= semantic_form_for @contact, :url => contacts_path do |f| %>
   <%= f.input :name, :label => t('.name') if ContactUs.require_name %>
   <%= f.input :email, :label => t('.email') %>

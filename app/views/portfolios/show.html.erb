@@ -9,7 +9,7 @@
 
       <div class="col-md-5">
         <h4><%= link_to "#{@portfolio.title}", '#' %></h4>
-        <p><%= @portfolio.description %></p>
+        <p><%= simple_format @portfolio.description %></p>
         <p><%= link_to 'View website', @portfolio.website %></p>
       </div>
 

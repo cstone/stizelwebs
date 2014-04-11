@@ -3,13 +3,21 @@
 @import url(http://fonts.googleapis.com/css?family=Nixie+One);
 @import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
 
+$dark-blue: #162636;
+$light-blue: #355C82;
+$dark-brown: #363016;
+$light-brown: #826835;
+$light-gray: #C9C9C9;
+$dark-gray: #363636;
+$white: #FFFFFF;
+
 
 
 body {
     /*background-color: #F8F8F8;*/
-    background-color: #FFFFFF;
+    background-color: $white;
     margin-top: 50px;
-    color: #162636;
+    color: $dark-blue;
 }
 
 
@@ -23,40 +31,7 @@ body {
 **************************************
 **************************************/
 
-.navbar-default {
-    background-color: #FFFFFF;
-    border-color: #E7E7E7;
-}
 
-.navbar-brand {
-    /*font-family: 'Nixie One', cursive;*/
-    font-family: 'Pontano Sans', sans-serif;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: #162636;
-}
-
-.navbar-default .navbar-brand {
-    color: #162636;
-}
-
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #162636;
-    background-color: #E7E7E7;
-}
-
-body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li.active > a {
-  color: #162636;
-  background-color: #E7E7E7;
-}
-
-.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  background-color: #162636;
-}
 
 /*************************************
 **************************************
@@ -78,7 +53,7 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 .splash {
     padding: 6em 0px;
     background: url(https://s3.amazonaws.com/stizelwebs/img/banner.jpg) no-repeat;
-    color: #162636;
+    color: $dark-blue;
     text-align: center;
     background-size: cover;
 }
@@ -91,7 +66,7 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 
 .pagehead {
     font-size: 24px;
-    color: #162636;
+    color: $dark-blue;
 }
 
 
@@ -105,7 +80,49 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 **************************************
 **************************************/
 
+.navbar-default {
+  background-color: $light-blue;
+  border-color: #E7E7E7;
+}
 
+.navbar-brand {
+  /*font-family: 'Nixie One', cursive;*/
+  font-family: 'Pontano Sans', sans-serif;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $white;
+}
+
+.navbar-default .navbar-brand {
+  color: $white;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: $white;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: $dark-blue;
+  background-color: #E7E7E7;
+}
+
+body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li.active > a {
+  color: $dark-blue;
+  background-color: #E7E7E7;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+  color: $white;
+  text-decoration: none;
+  outline: 0;
+  background-color: $dark-blue;
+}
+
+.navbar {
+  border: none;
+}
 
 
 /*************************************
@@ -159,7 +176,7 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
     font-family: 'Audiowide', cursive;
 }
 .panel-body {
-    color: #FFFFFF;
+    color: $white;
 }
 
 .content-container-margin-top {
@@ -170,8 +187,9 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
     padding: 30px 0px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #162636;
-    color: #FFFFFF;
+//    background: url("https://s3.amazonaws.com/stizelwebs/img/gradient-bg-blue.jpg") repeat-y;
+    background-color: $dark-blue;
+    color: $white;
 }
 
 .section-page-header {
@@ -179,7 +197,7 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background: url(https://s3.amazonaws.com/stizelwebs/img/banner.jpg);
-    color: #162636;
+    color: $dark-blue;
 }
 
 .section-content {
@@ -190,7 +208,7 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 .img-float-right {
   float: right;
   margin: 0 0 5px 10px;
-  border: 1px solid #162636;
+  border: 1px solid $dark-blue;
   padding: 2px;
 }
 
@@ -221,7 +239,7 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 **************************************
 **************************************/
 footer {
-  background-color: #162636;
+  background-color: $dark-blue;
   padding:20px 0;
   color: #EEEEEE;
   min-height:150px;
@@ -237,12 +255,11 @@ footer p {
 }
 
 footer a {
-  /*color: #428BCA;*/
-  color: #FFFFFF;
+  color: $white;
 }
 
 footer .nav > li > a:hover {
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 
 /*************************************

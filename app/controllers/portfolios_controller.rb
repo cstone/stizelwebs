@@ -1,5 +1,6 @@
 class PortfoliosController < ApplicationController
 
+  layout 'no-sidebar'
 
   def index
     @portfolios = Portfolio.page(params[:page]).per(5)

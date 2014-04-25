@@ -1,23 +1,26 @@
 @charset "UTF-8";
 /* CSS Document */
-@import url(http://fonts.googleapis.com/css?family=Nixie+One);
-@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
 
 $dark-blue: #162636;
-$light-blue: #355C82;
+$nav-blue: #2E5D7F;
+$light-blue: #4996CC;
 $dark-brown: #363016;
 $light-brown: #826835;
 $light-gray: #C9C9C9;
 $dark-gray: #363636;
 $white: #FFFFFF;
+$off-white: #EEEEEE;
+$footer-gray: #F6F8FB;
+
 
 
 
 body {
     /*background-color: #F8F8F8;*/
-    background-color: $white;
+//    background-color: $footer-gray;
     margin-top: 50px;
-    color: $dark-blue;
+    color: darken($nav-blue, 10%);
 }
 
 
@@ -43,32 +46,34 @@ body {
 **************************************
 **************************************/
 
-
-
-
-
-
-
+h3 {
+  font-family: 'Dancing Script', 'cursive';
+}
 
 .splash {
-    padding: 6em 0px;
-    background: url(https://s3.amazonaws.com/stizelwebs/img/banner.jpg) no-repeat;
-    color: $dark-blue;
+    padding: 5em 0px;
+    background: url(https://s3.amazonaws.com/stizelwebs/img/banner.jpg) repeat-x;
+    color: lighten($dark-blue, 10%);
     text-align: center;
     background-size: cover;
 }
 
 
 .home-jumbo {
-    font-family: 'Pontano Sans', sans-serif;
-    font-size: 32px;
+    font-family: 'Dancing Script', 'cursive';
+    font-size: 46px;
 }
 
 .pagehead {
     font-size: 24px;
     color: $dark-blue;
+    font-family: 'Dancing Script', 'cursive';
 }
 
+.fancy-header {
+  font-family: 'Dancing Script', 'cursive';
+  font-size: 22px;
+}
 
 /*************************************
 **************************************
@@ -80,14 +85,24 @@ body {
 **************************************
 **************************************/
 
+
+
 .navbar-default {
-  background-color: $light-blue;
+//  background-color: $light-blue;
+//  background: url("https://s3.amazonaws.com/stizelwebs/img/gradient-bg-blue.jpg") repeat-y;
+  background-color: $nav-blue;
   border-color: #E7E7E7;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: $white;
+  background-color: darken($nav-blue, 4%);
 }
 
 .navbar-brand {
   /*font-family: 'Nixie One', cursive;*/
-  font-family: 'Pontano Sans', sans-serif;
+//  font-family: 'Pontano Sans', sans-serif;
+  font-family: 'Dancing Script', 'cursive';
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -125,6 +140,67 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 }
 
 
+
+//Nav dropdown menu
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: $white;
+  background-color: darken($nav-blue, 4%);
+}
+
+body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li.active > a {
+  color: $white;
+  background-color: darken($nav-blue, 8%);
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+  color: $white;
+  background-color: lighten($nav-blue, 5%);
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: $white;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: lighten($nav-blue, 8%);
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0px;
+  margin: 2px 0px 0px;
+  list-style: none outside none;
+  font-size: 14px;
+  background-color: darken($nav-blue, 4%);
+  border: lighten($nav-blue, 10%);
+  border-radius: 4px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+  background-clip: padding-box;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857;
+  color: $white;
+  white-space: nowrap;
+}
+
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: $white;
+  background-color: lighten($nav-blue, 5%);
+}
+
 /*************************************
 **************************************
 **************************************
@@ -148,9 +224,10 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 **************************************
 **************************************
 **************************************/
-
-
-
+.section-content > .container {
+  background-color: $white;
+  padding: 25px 20px;
+}
 
 .content-container {
     padding: 15px;
@@ -162,36 +239,24 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
     margin-bottom: 0;
     background:url(../img/background.jpg) no-repeat;
     min-height: 360px;
-}
-
-.jumbotron p {
+  p {
     /*color: #2B3E50;*/
     text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
     color: #485563;
     font-size: 26px;
-}
-.kevinname {
-    color: #2B3E50;
-    font-size: 46px;
-    font-family: 'Audiowide', cursive;
+  }
 }
 .panel-body {
     color: $white;
 }
-
 .content-container-margin-top {
     margin-top: 40px;
 }
-
 .section-promo {
-    padding: 30px 0px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-//    background: url("https://s3.amazonaws.com/stizelwebs/img/gradient-bg-blue.jpg") repeat-y;
-    background-color: $dark-blue;
-    color: $white;
+  padding: 25px 0px;
+  background: url("https://s3.amazonaws.com/stizelwebs/img/gradient-bg-blue.jpg") repeat-y;
+  color: $white;
 }
-
 .section-page-header {
     padding: 20px 0px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -199,21 +264,12 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
     background: url(https://s3.amazonaws.com/stizelwebs/img/banner.jpg);
     color: $dark-blue;
 }
-
-.section-content {
-    padding: 20px 0;
-}
-
-
 .img-float-right {
   float: right;
   margin: 0 0 5px 10px;
   border: 1px solid $dark-blue;
   padding: 2px;
 }
-
-
-
 /*************************************
 **************************************
 **************************************
@@ -223,9 +279,6 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 **************************************
 **************************************
 **************************************/
-
-
-
 
 
 
@@ -239,29 +292,29 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 **************************************
 **************************************/
 footer {
-  background-color: $dark-blue;
+//  background: url("https://s3.amazonaws.com/stizelwebs/img/gradient-bg-blue.jpg") repeat-y;
+  background-color: lighten($nav-blue, 1%);
   padding:20px 0;
-  color: #EEEEEE;
+  color: $off-white;
   min-height:150px;
-}
 
-footer hr {
-  border-color: #2F3E4D;
-}
+  hr {
+    border: 1px solid rgba(238, 238, 238, .2);
+  }
 
-footer p {
-  padding-top: 10px;
-  color: #EEEEEE;
-}
+  p {
+    padding-top: 10px;
+    color: $off-white;
+  }
 
-footer a {
-  color: $white;
-}
+  a {
+    color: $white;
+  }
 
-footer .nav > li > a:hover {
-  background-color: $white;
+  .nav > li > a:hover {
+    background-color: $white;
+  }
 }
-
 /*************************************
 **************************************
 **************************************

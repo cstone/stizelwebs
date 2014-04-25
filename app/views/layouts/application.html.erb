@@ -14,7 +14,15 @@
 </div>
 <div class="section-content">
   <div class="container">
-    <%= yield %>
+    <div class="row">
+      <div class="col-md-9">
+        <%= yield %>
+      </div>
+      <div class="col-md-3">
+        <%= render 'layouts/structure/home-right' %>
+      </div>
+    </div>
+
   </div>
 </div>
 <%= render 'layouts/structure/footer' %>

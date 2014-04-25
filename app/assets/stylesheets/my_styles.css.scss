@@ -293,7 +293,7 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 **************************************/
 footer {
 //  background: url("https://s3.amazonaws.com/stizelwebs/img/gradient-bg-blue.jpg") repeat-y;
-  background-color: lighten($nav-blue, 1%);
+  background-color: darken($nav-blue, 15%);
   padding:20px 0;
   color: $off-white;
   min-height:150px;

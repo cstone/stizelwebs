@@ -7,9 +7,8 @@ Stizelwebs::Application.routes.draw do
 
   resources :portfolios, only: [:index, :show]
   resources :pages, except: [:show]
+  resources :contact, only: [:new, :create]
 
-  # match '/contact', to: 'contact_us/contacts#new', as: :contact_stizel
-  # match '/contacts', to: 'contact_us/contacts#create', via: :post
   match ':id', to: 'pages#show', as: :page
 
 

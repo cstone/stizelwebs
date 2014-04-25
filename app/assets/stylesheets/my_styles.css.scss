@@ -164,6 +164,10 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
   background-color: lighten($nav-blue, 8%);
 }
 
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: $nav-blue;
+}
+
 
 .dropdown-menu {
   position: absolute;

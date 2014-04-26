@@ -22,11 +22,10 @@ ActiveAdmin.register Portfolio do
       f.input :slug
       f.input :description, as: :html_editor
       f.input :website
-    end
-    f.inputs "Image" do
-      f.file_field :portfolio_image
-    end
-    f.inputs "Remove Current Image" do
+      f.input :portfolio_image, :as => :file, :hint => f.object.portfolio_image.present? \
+    ? f.template.image_tag(f.object.portfolio_image.url(:thumb))
+      : f.template.content_tag(:span, "no photo yet")
+      f.input :portfolio_image_cache, :as => :hidden
       f.input :remove_portfolio_image, as: :boolean, label: 'Check here to remove the current image.'
     end
     f.actions

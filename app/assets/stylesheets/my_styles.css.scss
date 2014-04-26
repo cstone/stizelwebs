@@ -25,6 +25,15 @@ body {
   font-family: 'Oxygen', 'sans-serif';
 }
 
+a {
+  color: $nav-blue;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: $nav-blue;
+  text-decoration: underline;
+}
 
 /*************************************
 **************************************
@@ -75,6 +84,9 @@ h3 {
 .fancy-header {
   font-family: 'Dancing Script', 'cursive';
   font-size: 22px;
+}
+
+.navbar-brand {
 }
 
 /*************************************
@@ -219,15 +231,18 @@ body > div.navbar.navbar-default.navbar-fixed-top > div > div.navbar-collapse.co
 }
 
 
-
-
-
 .navbar-default .navbar-toggle {
   border: none;
 }
 
 .navbar-collapse {
   box-shadow: none;
+}
+
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: $white;
+  background-color: $nav-blue;
 }
 
 /*************************************

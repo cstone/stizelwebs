@@ -67,6 +67,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    contact_us (0.5.0)
+      rails (>= 3.0.0)
     devise (3.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -200,6 +202,7 @@ DEPENDENCIES
   activeadmin
   carrierwave
   coffee-rails (~> 3.2.1)
+  contact_us (~> 0.5.0)
   figaro
   fog
   formtastic

@@ -27,6 +27,7 @@ gem 'activeadmin'
 gem 'jquery-ui-rails'
 gem 'kaminari'
 gem 'active_admin_editor'
+gem 'contact_us', '~> 0.5.0'
 
 
 # Gems used only for assets and not required

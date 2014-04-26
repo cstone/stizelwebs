@@ -1,1 +1,11 @@
-Test.
+<h3>Navigation</h3>
+<ul class="nav nav-pills nav-stacked">
+  <li class=<%= cpa(page_path('about-us')) %>><%= link_to 'About Us', page_path('about-us') %></li>
+  <li class=<%= cpa(page_path('our-process')) %>><%= link_to 'Our Process', page_path('our-process') %></li>
+  <li class=<%= cpa(page_path('website-design')) %>><%= link_to 'Website Design', page_path('website-design') %></li>
+  <li class=<%= cpa(page_path('website-development')) %>><%= link_to 'Website Development', page_path('website-development') %></li>
+  <% if !Portfolio.all.empty? %>
+      <li class=<%= cpa(portfolios_path) %>><%= link_to 'Portfolio', portfolios_path %></li>
+  <% end %>
+  <li><%= link_to 'Contact Us', '#' %></li>
+</ul>

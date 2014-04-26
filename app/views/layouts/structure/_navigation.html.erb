@@ -22,7 +22,9 @@
             <li class=<%= cpa(page_path('website-development')) %>><%= link_to 'Website Development', page_path('website-development') %></li>
           </ul>
         </li>
+        <% if !Portfolio.all.empty? %>
         <li class=<%= cpa(portfolios_path) %>><%= link_to 'Portfolio', portfolios_path %></li>
+        <% end %>
         <li><%= link_to 'Contact Us', '#' %></li>
       </ul>
     </div><!--/.nav-collapse -->

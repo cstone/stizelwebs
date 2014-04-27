@@ -5,7 +5,7 @@ Stizelwebs::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  resources :portfolios, only: [:index, :show], path: "works"
+  resources :portfolios, only: [:index, :show], path: "portfolio"
   resources :pages, except: :show
   get '/contact', to: 'contact_us/contacts#new', as: :contact_stizel
   get ':id', to: 'pages#show', as: :page

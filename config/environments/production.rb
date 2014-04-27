@@ -68,4 +68,16 @@ Stizelwebs::Application.configure do
 
   config.assets.compile = true
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.smtp_settings = {
+      address: 'smtpout.secureserver.net',
+      domain: 'www.stizelwebs.com',
+      port: 80,
+      user_name: ENV["CONTACT_EMAIL_ADDRESS"],
+      password: ENV["CONTACT_EMAIL_PASSWORD"],
+      authentication: 'plain'
+  }
+
 end

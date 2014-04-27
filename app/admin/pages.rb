@@ -44,7 +44,9 @@ ActiveAdmin.register Page do
         simple_format page.content
       end
       row :page_image do
-        image_tag(page.page_image.url(:thumb))
+        if page.page_image.url
+          image_tag page.page_image.url
+        end
       end
       row :created_at
       row :updated_at

@@ -6,7 +6,9 @@ ActiveAdmin.register Portfolio do
   index do
     selectable_column
     column :portfolio_image do |portfolio|
+      if portfolio.portfolio_image.url
       image_tag(portfolio.portfolio_image.url(:thumb))
+      end
     end
     column :title
     column :description
@@ -42,7 +44,9 @@ ActiveAdmin.register Portfolio do
         simple_format portfolio.description
       end
       row :portfolio_image do
-        image_tag(portfolio.portfolio_image.url(:thumb))
+        if portfolio.portfolio_image.url
+          image_tag(portfolio.portfolio_image.url(:thumb))
+        end
       end
       row :created_at
       row :updated_at

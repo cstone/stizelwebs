@@ -6,10 +6,17 @@ ActiveAdmin.register Page do
   index do
     selectable_column
     column :page_image do |page|
-      image_tag(page.page_image.url(:thumb))
+      if page.page_image.url
+        image_tag page.page_image.url(:thumb)
+      end
     end
-    column :title
+    column :title do |content|
+      content.title.truncate(50).html_safe
+    end
     column :permalink
+    column :content do |content|
+      content.content.truncate(75).html_safe
+    end
     default_actions
   end
 
